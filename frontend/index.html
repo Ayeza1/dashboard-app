@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Sales Dashboard</h1>
+
+  <div class="filter-bar">
+    <label for="categoryFilter">Filter by category:</label>
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+    </select>
+  </div>
+
+  <div id="loadingState">Loading dashboard...</div>
+  <div id="errorState" style="display:none;"><p id="errorMsg"></p></div>
+
+  <div id="dashboardContent" style="display:none;">
+    <div class="stat-cards">
+      <div class="stat-card">
+        <h3>Total Sales</h3>
+        <p id="statSales">-</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Orders</h3>
+        <p id="statOrders">-</p>
+      </div>
+      <div class="stat-card">
+        <h3>Avg Order Value</h3>
+        <p id="statAvg">-</p>
+      </div>
+    </div>
+
+    <div class="chart-grid">
+      <div class="chart-box">
+        <h3>Sales by Month</h3>
+        <canvas id="lineChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h3>Sales by Category</h3>
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h3>Category Share</h3>
+        <canvas id="pieChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
