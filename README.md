@@ -1,4 +1,4 @@
-# Sales Dashboard
+#Dashboard
 
 A dashboard with charts fed by a backend, built as a practice task for my frontend internship to learn how to turn raw data into visualizations people can actually read at a glance.
 
